@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QTr7R6yCRZk=",
+  "success": true,
+  "projectFilePath": "/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/quinielas.csproj",
+  "expectedPackageFiles": [
+    "/Users/luismontes/.nuget/packages/microsoft.aspnetcore.app.internal.assets/10.0.1/microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
