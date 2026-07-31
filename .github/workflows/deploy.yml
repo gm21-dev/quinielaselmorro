@@ -37,9 +37,20 @@ jobs:
       - name: Publish Blazor App
         run: dotnet publish quinielas/quinielas.csproj -c Release -o release
 
-      # 4. Solución al problema de SPA / Enrutamiento (Evitar Error 404 al refrescar)
+      # 3b. (Diagnóstico) Ver qué archivos se generaron en la carpeta release
+      - name: List generated files
+        run: ls -R release
+
+      # 4. Solución al problema de SPA / Enrutamiento (Usando wildcards por seguridad)
       - name: Copy index.html to 404.html
-        run: cp release/wwwroot/index.html release/wwwroot/404.html
+        run: |
+          if [ -f "release/wwwroot/index.html" ]; then
+            cp release/wwwroot/index.html release/wwwroot/404.html
+          elif [ -f "release/index.html" ]; then
+            cp release/index.html release/404.html
+          else
+            echo "No se encontró index.html en las rutas esperadas"
+          fi
 
       # 5. Agregar archivo .nojekyll (Evita que GitHub ignore carpetas que inician con _)
       - name: Add .nojekyll file
