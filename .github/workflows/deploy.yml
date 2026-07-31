@@ -35,7 +35,7 @@ jobs:
 
       # 3. Compilar y publicar el proyecto en modo Release
       - name: Publish Blazor App
-        run: dotnet publish -c Release -o release
+        run: dotnet publish quinielas/quinielas.csproj -c Release -o release
 
       # 4. Solución al problema de SPA / Enrutamiento (Evitar Error 404 al refrescar)
       - name: Copy index.html to 404.html
