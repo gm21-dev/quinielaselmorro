@@ -207,9 +207,6 @@
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.mi0u2azqow.wasm
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.ca3decyheb.pdb
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/dotnet.4boudzyeuh.js
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/blazor.webassembly.66stpp682q.js.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.mrojqw2yhh.wasm.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/Microsoft.AspNetCore.Components.5yorhp2rya.wasm.gz
@@ -418,9 +415,6 @@
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat.gz
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.mi0u2azqow.wasm.gz
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.ca3decyheb.pdb.gz
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/dotnet.4boudzyeuh.js.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/quinielas.staticwebassets.runtime.json
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/quinielas.staticwebassets.endpoints.json
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/quinielas.dll
@@ -1111,10 +1105,6 @@
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/xcbqc1eiji-{0}-tjcz0u77k5-tjcz0u77k5.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/zq0tqe7l5h-{0}-tptq2av103-tptq2av103.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/ldd598qjth-{0}-lfu7j35m59-lfu7j35m59.gz
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/f57kss8rfk-{0}-mi0u2azqow-mi0u2azqow.gz
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/gy58vlry5e-{0}-ca3decyheb-ca3decyheb.gz
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/9058ky1iyj-{0}-4boudzyeuh-4boudzyeuh.gz
-/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/5ih6bc3aju-{0}-tmc6xkz9mp-tmc6xkz9mp.gz
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/staticwebassets.build.json
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/staticwebassets.build.json.cache
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/staticwebassets.development.json
@@ -1125,3 +1115,13 @@
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/refint/quinielas.dll
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/quinielas.pdb
 /Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/ref/quinielas.dll
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.kebg5unzrm.wasm
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.1zqmpv27f0.pdb
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/dotnet.l556qfmiej.js
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.kebg5unzrm.wasm.gz
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/quinielas.1zqmpv27f0.pdb.gz
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/bin/Debug/net10.0/wwwroot/_framework/dotnet.l556qfmiej.js.gz
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/f57kss8rfk-{0}-kebg5unzrm-kebg5unzrm.gz
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/gy58vlry5e-{0}-1zqmpv27f0-1zqmpv27f0.gz
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/9058ky1iyj-{0}-l556qfmiej-l556qfmiej.gz
+/Users/luismontes/Proyectos/Personales/QuinielasElMorro/quinielaselmorro/quinielas/obj/Debug/net10.0/compressed/5ih6bc3aju-{0}-z8rsu6uqwf-z8rsu6uqwf.gz
