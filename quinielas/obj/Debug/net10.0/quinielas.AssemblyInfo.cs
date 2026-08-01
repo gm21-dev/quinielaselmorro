@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("quinielas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41614e0c943c8e23348d89d206915b4ec176aec5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0db43bec2f4cd3c9f8f7276fad51b2c685dcc3a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("quinielas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("quinielas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
