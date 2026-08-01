@@ -31,36 +31,28 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x' # Cambia a '9.0.x' si usas .NET 9
+          dotnet-version: '10.0.x' # Cambia a '9.0.x' si usas .NET 9
 
       # 3. Compilar y publicar el proyecto en modo Release
       - name: Publish Blazor App
         run: dotnet publish quinielas/quinielas.csproj -c Release -o release
 
-      # 3b. (Diagnóstico) Ver qué archivos se generaron en la carpeta release
+      # 4. (Diagnóstico) Ver qué archivos se generaron en la carpeta release
       - name: List generated files
         run: ls -R release
 
-      # 4. Solución al problema de SPA / Enrutamiento (Usando wildcards por seguridad)
-      - name: Copy index.html to 404.html
-        run: |
-          if [ -f "release/wwwroot/index.html" ]; then
-            cp release/wwwroot/index.html release/wwwroot/404.html
-          elif [ -f "release/index.html" ]; then
-            cp release/index.html release/404.html
-          else
-            echo "No se encontró index.html en las rutas esperadas"
-          fi
-
       # 5. Agregar archivo .nojekyll (Evita que GitHub ignore carpetas que inician con _)
       - name: Add .nojekyll file
-        run: touch release/wwwroot/.nojekyll
+        run: |
+          touch release/wwwroot/.nojekyll
+          touch release/.nojekyll
 
       # 6. Cambiar la etiqueta <base href="/" /> para que coincida con la URL del repositorio
       # GitHub Pages aloja sitios en https://usuario.github.io/nombre-repo/
       - name: Change base-tag in index.html
         run: |
           sed -i 's/<base href="\/" \/>/<base href="\/${{ github.event.repository.name }}\/" \/>/g' release/wwwroot/index.html
+          sed -i 's/<base href="\/" \/>/<base href="\/quinielaselmorro\/" \/>/g' release/wwwroot/404.html
 
       # 7. Cargar los archivos estáticos generados
       - name: Upload Pages Artifact
