@@ -31,7 +31,7 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.0.x' # Cambia a '9.0.x' si usas .NET 9
+          dotnet-version: '8.0.x' # Cambia a '9.0.x' si usas .NET 9
 
       # 3. Compilar y publicar el proyecto en modo Release
       - name: Publish Blazor App
@@ -52,7 +52,8 @@ jobs:
       - name: Change base-tag in index.html
         run: |
           sed -i 's/<base href="\/" \/>/<base href="\/${{ github.event.repository.name }}\/" \/>/g' release/wwwroot/index.html
-          sed -i 's/<base href="\/" \/>/<base href="\/quinielaselmorro\/" \/>/g' release/wwwroot/404.html
+          sed -i 's/<base href="\/" \/>/<base href="\/${{ github.event.repository.name }}\/" \/>/g' release/wwwroot/404.html
+
 
       # 7. Cargar los archivos estáticos generados
       - name: Upload Pages Artifact
