@@ -1,8 +1,8 @@
 {
     "partidos": [
         {
-            "logolocal": "/src/logos/Liga-MX/ATLANTE-FC.png",
-            "logovisitante": "/src/logos/Liga-MX/Toluca.svg.webp",
+            "logolocal": "src/logos/Liga-MX/ATLANTE-FC.png",
+            "logovisitante": "src/logos/Liga-MX/Toluca.svg.webp",
             "local": "Atlante",
             "visitante": "Toluca",
             "fecha": "Sáb, 15/8",
@@ -10,8 +10,8 @@
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/Monterrey.webp",
-            "logovisitante": "/src/logos/Liga-MX/Juarez-fc.png",
+            "logolocal": "src/logos/Liga-MX/Monterrey.webp",
+            "logovisitante": "src/logos/Liga-MX/Juarez-fc.png",
             "local": "Monterrey",
             "visitante": "Juárez",
             "fecha": "Sáb, 15/8",
@@ -19,8 +19,8 @@
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/atlas.png",
-            "logovisitante": "/src/logos/Liga-MX/tigres.png",
+            "logolocal": "src/logos/Liga-MX/atlas.png",
+            "logovisitante": "src/logos/Liga-MX/tigres.png",
             "local": "Atlas",
             "visitante": "Tigres",
             "fecha": "Sáb, 15/8",
@@ -28,8 +28,8 @@
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/Pumas.png",
-            "logovisitante": "/src/logos/Liga-MX/Queretaro.png",
+            "logolocal": "src/logos/Liga-MX/Pumas.png",
+            "logovisitante": "src/logos/Liga-MX/Queretaro.png",
             "local": "Pumas",
             "visitante": "Querétaro",
             "fecha": "Dom, 16/8",
@@ -37,8 +37,8 @@
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/America.png",
-            "logovisitante": "/src/logos/Liga-MX/San Luis.png",
+            "logolocal": "src/logos/Liga-MX/America.png",
+            "logovisitante": "src/logos/Liga-MX/San Luis.png",
             "local": "América",
             "visitante": "San Luis",
             "fecha": "Dom, 16/8",
@@ -46,17 +46,17 @@
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/Santos.png",
+            "logolocal": "src/logos/Liga-MX/Santos.png",
             "local": "Santos",
-            "logovisitante": "/src/logos/Liga-MX/Guadalajara-chivas.png",
+            "logovisitante": "src/logos/Liga-MX/Guadalajara-chivas.png",
             "visitante": "Guadalajara",
             "fecha": "Dom, 16/8",
             "hora": "7:00 p.m.",
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/Tijuana.png",
-            "logovisitante": "/src/logos/Liga-MX/Cruz-Azul.webp",
+            "logolocal": "src/logos/Liga-MX/Tijuana.png",
+            "logovisitante": "src/logos/Liga-MX/Cruz-Azul.webp",
             "local": "Tijuana",
             "visitante": "Cruz Azul",
             "fecha": "Dom, 16/8",
@@ -64,8 +64,8 @@
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/Necaxa.png",
-            "logovisitante": "/src/logos/Liga-MX/Leon-fc.png",
+            "logolocal": "src/logos/Liga-MX/Necaxa.png",
+            "logovisitante": "src/logos/Liga-MX/Leon-fc.png",
             "local": "Necaxa",
             "visitante": "León",
             "fecha": "Lun, 17/8",
@@ -73,8 +73,8 @@
             "resultado": ""
         },
         {
-            "logolocal": "/src/logos/Liga-MX/Pachuca.png",
-            "logovisitante": "/src/logos/Liga-MX/Puebla.png",
+            "logolocal": "src/logos/Liga-MX/Pachuca.png",
+            "logovisitante": "src/logos/Liga-MX/Puebla.png",
             "local": "Pachuca",
             "visitante": "Puebla",
             "fecha": "Lun, 17/8",
