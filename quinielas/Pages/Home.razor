@@ -28,7 +28,7 @@
                                         <div class="d-flex align-items-center justify-content-center gap-2">
                                             <!-- Equipo Local -->
                                             <div class="d-flex align-items-center gap-2 flex-grow-1 justify-content-start">
-                                                <img src="@partido.LogoLocal" alt="@partido.Local"
+                                                <img src="@($"./{partido.LogoLocal}")" alt="@partido.Local"
                                                      style="width: 32px; height: 32px; object-fit: contain;" />
                                                 <strong class="fs-6 text-truncate">@partido.Local</strong>
                                             </div>
@@ -36,7 +36,7 @@
                                             <!-- Equipo Visitante -->
                                             <div class="d-flex align-items-center gap-2 flex-grow-1 justify-content-end">
                                                 <strong class="fs-6 text-truncate">@partido.Visitante</strong>
-                                                <img src="@partido.LogoVisitante" alt="@partido.Visitante"
+                                                <img src="@($"./{partido.LogoVisitante}")" alt="@partido.Visitante"
                                                      style="width: 32px; height: 32px; object-fit: contain;" />
                                             </div>
                                         </div>
