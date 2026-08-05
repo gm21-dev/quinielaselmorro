@@ -2,11 +2,13 @@
 @inject HttpClient Http
 @using System.Text.Json
 
+@inject MostrarMensajes MostrarMensajesService
+
 <PageTitle>El Morro</PageTitle>
 
 <div class="Home_Principal">
     <div class="d-flex flex-column justify-content-center align-items-center py-3">
-        <img src="/src/img/balon_logo_trans.png" alt="logo" class="Home_logo">
+        <img src="./src/img/balon_logo_trans.png" alt="logo" class="Home_logo">
         <p class="fs-3">QUINIELAS EL MORRO</p>
     </div>
     <div class="d-flex justify-content-center align-items-center py-3 ">
@@ -80,25 +82,11 @@
         <button class="btn btn-warning" @onclick="GuardarQuiniela">REGISTRAR</button>
         <button class="btn btn-danger">CANCELAR</button>
     </div>
-    @if (!string.IsNullOrEmpty(mensajeResultado))
-    {
-        <div class="alert alert-success mt-3 text-center" role="alert">
-            @mensajeResultado
-        </div>
-    }
-    @if (!string.IsNullOrEmpty(mensajeResultadoFail))
-    {
-        <div class="alert alert-danger mt-3 text-center" role="alert">
-            @mensajeResultadoFail
-        </div>
-    }
 </div>
 
 
 @code {
     public List<Partido>? partidos;
-    public string mensajeResultado = string.Empty;
-    public string mensajeResultadoFail = string.Empty;
     protected override async Task OnInitializedAsync()
     {
         var options = new JsonSerializerOptions
@@ -113,7 +101,7 @@
         partido.Votacion = opcion;
     }
 
-    public void GuardarQuiniela()
+    public async Task GuardarQuiniela()
     {
         int totalVotados = partidos!.Count(p => !string.IsNullOrEmpty(p.Votacion));
         if (totalVotados == partidos!.Count)
@@ -122,16 +110,14 @@
             foreach (var partido in partidos!)
             {
                 string voto = string.IsNullOrEmpty(partido.Votacion) ? "Sin seleccionar" : partido.Votacion;
-                Console.WriteLine($"Partido: {partido.Local} vs {partido.Visitante} | Pronóstico: {voto}");
+                Console.WriteLine($"{partido.Local} vs {partido.Visitante} ==> Pronóstico: {voto}");
             }
             Console.WriteLine("===========================");
-            mensajeResultadoFail = "";
-            mensajeResultado = "¡Se guardaron los pronósticos correctamente!";
+            await MostrarMensajesService.MostrarMensajeExitoso("¡Se guardaron los pronósticos correctamente!");
         }
         else
         {
-            mensajeResultado = "";
-            mensajeResultadoFail = "Falta votar en algun partido";
+            await MostrarMensajesService.MostrarMensajeError("Revisa votar en todos los partidos");
         }
 
     }
