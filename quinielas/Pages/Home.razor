@@ -1,7 +1,138 @@
 ﻿@page "/"
+@inject HttpClient Http
+@using System.Text.Json
 
-<PageTitle>Home</PageTitle>
+<PageTitle>El Morro</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="Home_Principal">
+    <div class="d-flex flex-column justify-content-center align-items-center py-3">
+        <img src="/src/img/balon_logo_trans.png" alt="logo" class="Home_logo">
+        <p class="fs-3">QUINIELAS EL MORRO</p>
+    </div>
+    <div class="d-flex justify-content-center align-items-center py-3 ">
+        <div class="Home_Formulario ">
+            <div class="container my-4">
+                <h3 class="text-center py-2">⚽ Próximos Partidos ⚽</h3>
+                @if (partidos == null)
+                {
+                    <p><em>Cargando partidos...</em></p>
+                }
+                else
+                {
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        @foreach (var partido in partidos)
+                        {
+                            <div class="col">
+                                <div class="card h-100 shadow-sm border-0 bg-light">
+                                    <div class="card-body text-center d-flex align-items-center justify-content-center">
+                                        <div class="d-flex align-items-center justify-content-center gap-2">
+                                            <!-- Equipo Local -->
+                                            <div class="d-flex align-items-center gap-2 flex-grow-1 justify-content-start">
+                                                <img src="@partido.LogoLocal" alt="@partido.Local"
+                                                     style="width: 32px; height: 32px; object-fit: contain;" />
+                                                <strong class="fs-6 text-truncate">@partido.Local</strong>
+                                            </div>
+                                            <span class="badge bg-secondary">VS</span>
+                                            <!-- Equipo Visitante -->
+                                            <div class="d-flex align-items-center gap-2 flex-grow-1 justify-content-end">
+                                                <strong class="fs-6 text-truncate">@partido.Visitante</strong>
+                                                <img src="@partido.LogoVisitante" alt="@partido.Visitante"
+                                                     style="width: 32px; height: 32px; object-fit: contain;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-0 text-muted text-center small">
+                                        📅 @partido.Fecha - ⏰ @partido.Hora
+                                    </div>
+                                    @if (partido.resultado != "")
+                                    {
+                                        <span class="badge bg-info my-3">Resultado: @partido.resultado</span>
+                                    }
+                                    <div class="d-flex justify-content-center gap-2 pb-3">
+                                        <button class="btn @(partido.Votacion == "L" ? "btn-dark" : "btn-outline-dark")"
+                                                @onclick='() => SeleccionarVoto(partido, "L")'>
+                                            L
+                                        </button>
+                                        <button
+                                            class="btn @(partido.Votacion == "E" ? "btn-info text-white" : "btn-outline-info")"
+                                            @onclick='() => SeleccionarVoto(partido, "E")'>
+                                            E
+                                        </button>
+                                        <button class="btn @(partido.Votacion == "V" ? "btn-success" : "btn-outline-success")"
+                                                @onclick='() => SeleccionarVoto(partido, "V")'>
+                                            V
+                                        </button>
+                                    </div>
 
-Welcome to your new app.
+                                    @if (!string.IsNullOrEmpty(partido.Votacion))
+                                    {
+                                        <span class="badge bg-danger">Pronóstico actual: @partido.Votacion</span>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class=" d-flex justify-content-center align-items-center py-3 gap-3">
+        <button class="btn btn-warning" @onclick="GuardarQuiniela">REGISTRAR</button>
+        <button class="btn btn-danger">CANCELAR</button>
+    </div>
+    @if (!string.IsNullOrEmpty(mensajeResultado))
+    {
+        <div class="alert alert-success mt-3 text-center" role="alert">
+            @mensajeResultado
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(mensajeResultadoFail))
+    {
+        <div class="alert alert-danger mt-3 text-center" role="alert">
+            @mensajeResultadoFail
+        </div>
+    }
+</div>
+
+
+@code {
+    public List<Partido>? partidos;
+    public string mensajeResultado = string.Empty;
+    public string mensajeResultadoFail = string.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        var options = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
+        var data = await Http.GetFromJsonAsync<Calendario>("src/json/MX_APE_J4-17.json", options);
+        partidos = data?.Partidos;
+    }
+    public void SeleccionarVoto(Partido partido, string opcion)
+    {
+        partido.Votacion = opcion;
+    }
+
+    public void GuardarQuiniela()
+    {
+        int totalVotados = partidos!.Count(p => !string.IsNullOrEmpty(p.Votacion));
+        if (totalVotados == partidos!.Count)
+        {
+            Console.WriteLine("=== PROCESANDO QUINIELA ===");
+            foreach (var partido in partidos!)
+            {
+                string voto = string.IsNullOrEmpty(partido.Votacion) ? "Sin seleccionar" : partido.Votacion;
+                Console.WriteLine($"Partido: {partido.Local} vs {partido.Visitante} | Pronóstico: {voto}");
+            }
+            Console.WriteLine("===========================");
+            mensajeResultadoFail = "";
+            mensajeResultado = "¡Se guardaron los pronósticos correctamente!";
+        }
+        else
+        {
+            mensajeResultado = "";
+            mensajeResultadoFail = "Falta votar en algun partido";
+        }
+
+    }
+}

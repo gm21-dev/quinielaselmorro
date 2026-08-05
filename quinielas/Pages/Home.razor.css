@@ -1,0 +1,18 @@
+.Home_Principal {
+    background-color: #D1D5DB !important;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.Home_logo {
+    width: 10%;
+    height: auto;
+}
+
+.Home_Formulario {
+    background-color: aliceblue;
+    min-width: 50vw;
+    min-height: 60vh;
+    border: 1px black solid;
+    border-radius: 2%;
+}
